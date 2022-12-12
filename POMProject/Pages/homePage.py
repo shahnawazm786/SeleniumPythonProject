@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-class HomePage():
+class HomePage:
 
     def __int__(self,driver):
         self.driver=driver

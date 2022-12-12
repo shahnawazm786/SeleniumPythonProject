@@ -8,7 +8,6 @@ from POMProject.Pages.homePage import HomePage
 class LoginTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Chrome()
         #driver = webdriver.Chrome(executable_path='')
         cls.driver = webdriver.Chrome()
         cls.driver.implicitly_wait(40)
@@ -23,6 +22,7 @@ class LoginTest(unittest.TestCase):
         login.enter_username('standard_user')
         login.enter_password('secret_sauce')
         login.click_loginbutton()
+        time.sleep(5)
         home=HomePage(driver)
         home.click_on_home_burger_menu()
         home.click_on_logout()
@@ -32,7 +32,7 @@ class LoginTest(unittest.TestCase):
         #self.driver.find_element(By.ID, "password").send_keys('secret_sauce')
         #self.driver.find_element(By.ID, "login-button").click()
         #self.driver.find_element(By.ID, 'react-burger-menu-btn').click()
-        #time.sleep(2)
+
         #self.driver.find_element(By.ID, 'logout_sidebar_link').click()
 
     @classmethod
