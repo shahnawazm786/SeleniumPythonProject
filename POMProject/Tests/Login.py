@@ -16,13 +16,20 @@ class LoginTest(unittest.TestCase):
         time.sleep(5)
 
     def test_login_valid(self):
-        self.driver.get("https://www.saucedemo.com/")
-        self.driver.find_element(By.ID, "user-name").send_keys('standard_user')
-        self.driver.find_element(By.ID, "password").send_keys('secret_sauce')
-        self.driver.find_element(By.ID, "login-button").click()
-        self.driver.find_element(By.ID, 'react-burger-menu-btn').click()
-        time.sleep(2)
-        self.driver.find_element(By.ID, 'logout_sidebar_link').click()
+        driver=self.driver
+        driver.get("https://www.saucedemo.com/")
+
+        login=LoginPage(driver)
+        login.enter_username('standard_user')
+        login.enter_password('secret_sauce')
+        login.click_loginbutton()
+
+        #driver.find_element(By.ID, "user-name").send_keys('standard_user')
+        #self.driver.find_element(By.ID, "password").send_keys('secret_sauce')
+        #self.driver.find_element(By.ID, "login-button").click()
+        #self.driver.find_element(By.ID, 'react-burger-menu-btn').click()
+        #time.sleep(2)
+        #self.driver.find_element(By.ID, 'logout_sidebar_link').click()
 
     @classmethod
     def tearDownClass(cls):
