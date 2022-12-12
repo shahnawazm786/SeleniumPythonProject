@@ -23,6 +23,10 @@ class LoginTest(unittest.TestCase):
         login.enter_username('standard_user')
         login.enter_password('secret_sauce')
         login.click_loginbutton()
+        home=HomePage(driver)
+        home.click_on_home_burger_menu()
+        home.click_on_logout()
+
 
         #driver.find_element(By.ID, "user-name").send_keys('standard_user')
         #self.driver.find_element(By.ID, "password").send_keys('secret_sauce')
