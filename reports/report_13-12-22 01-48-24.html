@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit Test Report</title>
+    <meta name="generator" content="HTMLTestRunner 1.0.18"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js"></script>
+    <style>
+        
+    </style>
+    <script>
+        
+    </script>
+</head>
+<body>
+<div class='heading'>
+    <h1 style="margin-left:1ex;">Unit Test Report</h1>
+    
+    <p class='attribute'><strong>Start Time : </strong> 2022-12-13 13:48:24</p>
+    
+    <p class='attribute'><strong>Duration : </strong> 0:01:10.852738</p>
+    
+    <p class='attribute'><strong>Status : </strong> Pass 1 Error 1</p>
+    
+    <p class='attribute'><strong>Description : </strong> Test report generation using HTMLTestRunner-rv</p>
+    
+    <p class='attribute'><strong>Tested By : </strong> Unknown</p>
+    
+</div>
+<div>
+    <p id='show_detail_line'><b>Show</b>
+        <button><a href='javascript:showCase(0)' style="color:#660066;">Summary</a></button>
+        <button><a href='javascript:showCase(1)' style="color:#660066;">Failed</a></button>
+        <button><a href='javascript:showCase(2)' style="color:#660066;">Passed</a></button>
+        <button><a href='javascript:showCase(3)' style="color:#660066;">All</a></button>
+    </p>
+    <table id='result_table'>
+        <colgroup>
+            <col align='left'/>
+            <col align='right'/>
+            <col align='right'/>
+            <col align='right'/>
+            <col align='right'/>
+            <col align='right'/>
+        </colgroup>
+        <tr id='header_row'>
+            <td>Test Group/Test case</td>
+            <td>Count</td>
+            <td>Pass</td>
+            <td>Fail</td>
+            <td>Error</td>
+            <td>View</td>
+        </tr>
+        
+        <tr class='errorClass' style="font-weight:bold;color:white;">
+            <td><a href="javascript:showClassDetail('c1','2')">LoginTest</a></td>
+            <td>2</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>
+                <button><a href="javascript:showClassDetail('c1','2')"
+                           style="color:#660066;">Detail</a></button>
+            </td>
+        </tr>
+            
+            <tr id="ft1.1" class='none'>
+                <td class='errorCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_ft1.1')">test_login_invalid</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_ft1.1')" style="color:#660066;">
+                                ERROR
+                            </a></button>
+                        <div id='div_ft1.1' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_ft1.1').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre></pre>
+                            <pre style="color: red;">Traceback (most recent call last):
+  File "C:\PythonProject\SeleniumProject\POMProject\Tests\Login.py", line 38, in test_login_invalid
+    message=login.invalid_login_message()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\PythonProject\SeleniumProject\POMProject\Pages\loginPage.py", line 18, in invalid_login_message
+    msg=self.driver.find_element(By.XPATH,Locators.invvalid_login_message_xpath).text
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 861, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 444, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 249, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//h3[@data-test='error']"}
+  (Session info: chrome=108.0.5359.99)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0093F243]
+	(No symbol) [0x008C7FD1]
+	(No symbol) [0x007BD04D]
+	(No symbol) [0x007EC0B0]
+	(No symbol) [0x007EC22B]
+	(No symbol) [0x0081E612]
+	(No symbol) [0x008085D4]
+	(No symbol) [0x0081C9EB]
+	(No symbol) [0x00808386]
+	(No symbol) [0x007E163C]
+	(No symbol) [0x007E269D]
+	GetHandleVerifier [0x00BD9A22+2655074]
+	GetHandleVerifier [0x00BCCA24+2601828]
+	GetHandleVerifier [0x009E8C0A+619850]
+	GetHandleVerifier [0x009E7830+614768]
+	(No symbol) [0x008D05FC]
+	(No symbol) [0x008D5968]
+	(No symbol) [0x008D5A55]
+	(No symbol) [0x008E051B]
+	BaseThreadInitThunk [0x765D6939+25]
+	RtlGetFullPathName_UEx [0x77328FD2+1218]
+	RtlGetFullPathName_UEx [0x77328F9D+1165]
+
+</pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+            <tr id="pt1.2" class='hiddenRow'>
+                <td class='passCase'>
+                    <div class='testcase'>
+                        <a class="popup_link" onfocus='this.blur();'
+                           href="javascript:showTestDetail('div_pt1.2')">test_login_valid</a>
+                    </div>
+                </td>
+                <td colspan='5' align='center'>
+                    <div>
+                        <!--css div popup start-->
+                        <button>
+                            <a class="popup_link" onfocus='this.blur();'
+                               href="javascript:showTestDetail('div_pt1.2')" style="color:#660066;">
+                                PASS
+                            </a></button>
+                        <div id='div_pt1.2' class="popup_window">
+                            <div style='text-align: right; color:red;cursor:pointer'>
+                                <a onfocus='this.blur();'
+                                   onclick="document.getElementById('div_pt1.2').style.display = 'none'; "
+                                   style="color:red;">
+                                    [x]</a>
+                            </div>
+                            <pre></pre>
+                            <pre style="color: red;"></pre>
+                        </div>
+                        <!--css div popup end-->
+                    </div>
+                </td>
+            </tr>
+            
+        
+
+        <tr id='total_row'>
+            <td>Total</td>
+            <td>2</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+</div>
+<br><br>
+<div id='ending'><b>Time Elapsed: </b>0:01:10.852738</div>
+</body>
+</html>

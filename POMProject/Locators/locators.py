@@ -4,6 +4,7 @@ class Locators:
     username_textbox_id = "user-name"
     password_textbox_id = "password"
     login_button_id = "login-button"
+    invvalid_login_message_xpath="//h3[@data-test='error']"
 
 
     # home page locators

@@ -14,5 +14,9 @@ class LoginPage:
     def click_loginbutton(self):
         self.driver.find_element(By.ID, Locators.login_button_id).click()
 
+    def invalid_login_message(self):
+        msg=self.driver.find_element(By.XPATH,Locators.invvalid_login_message_xpath).text
+        return msg
+
 
 

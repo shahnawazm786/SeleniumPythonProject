@@ -27,6 +27,16 @@ class LoginTest(unittest.TestCase):
         home.click_on_home_burger_menu()
         home.click_on_logout()
 
+    def test_login_invalid(self):
+        driver = self.driver
+        driver.get("https://www.saucedemo.com/")
+
+        login = LoginPage(driver)
+        login.enter_username('standard_user')
+        login.enter_password('secret_sauce')
+        login.click_loginbutton()
+        message=login.invalid_login_message()
+        self.assertEqual(message,'Epic sadface: Username and password do not match any user in this service')
 
         #driver.find_element(By.ID, "user-name").send_keys('standard_user')
         #self.driver.find_element(By.ID, "password").send_keys('secret_sauce')
