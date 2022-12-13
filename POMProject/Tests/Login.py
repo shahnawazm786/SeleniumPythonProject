@@ -4,7 +4,7 @@ import time
 import unittest
 from POMProject.Pages.loginPage import LoginPage
 from POMProject.Pages.homePage import HomePage
-
+import HtmlTestRunner
 class LoginTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -43,4 +43,4 @@ class LoginTest(unittest.TestCase):
 
 
 if __name__ =='__main__':
-    unittest.main()
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner())
